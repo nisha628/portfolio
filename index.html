@@ -541,82 +541,136 @@
      
 
         <!--==================== QUALIFICATION ====================-->
-        <section class="qualification section">
-          <h2 class="section_title">Qualification</h2>
-        <span class="section_subtitle">My personal journey</span>
-    
-        <div class="qualification_container container">
-          <div class="qualification_tabs">
+        <!-- Add this script in your HTML to handle the toggle functionality -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".qualification_button");
+    const contents = document.querySelectorAll(".qualification_content");
 
-          <div class="qualification_button button--flex qualification_active" data-target='#education'>
-            <i class="uil uil-graduation-cap qualification_icon"></i>
-            Education
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.getAttribute("data-target");
+        contents.forEach((content) => {
+          content.classList.remove("qualification_active");
+        });
+        document.querySelector(target).classList.add("qualification_active");
+
+        tabs.forEach((t) => {
+          t.classList.remove("qualification_active");
+        });
+        tab.classList.add("qualification_active");
+      });
+    });
+  });
+</script>
+
+<!-- HTML Structure -->
+<div class="qualification_container container">
+  <div class="qualification_tabs">
+    <div class="qualification_button button--flex qualification_active" data-target='#education'>
+      <i class="uil uil-graduation-cap qualification_icon"></i>
+      Education
+    </div>
+    <div class="qualification_button button--flex" data-target='#work'>
+      <i class="uil uil-briefcase-alt"></i>
+      Work
+    </div>
+  </div>
+
+  <div class="qualification_sections">
+    <!-- Education Section -->
+    <div class="qualification_content qualification_active" data-content id="education">
+      <!-- Education 1 -->
+      <div class="qualification_data">
+        <div>
+          <h3 class="qualification_title">Binghamton University, Thomas J. Watson College of Engineering and Applied Science</h3>
+          <span class="qualification_subtitle">Master of Science in Information Systems</span>
+          <div class="qualification_calender">
+            <i class="uil uil-calendar-alt"></i>
+            2023 - 2025
           </div>
+        </div>
 
-          <div class="qualification_button button--flex" data-target='#work'>
-            <i class="uil uil-briefcase-alt"></i>
-            Work
+        <div>
+          <span class="qualification_rounder"></span>
+          <span class="qualification_line"></span>
+        </div>
+      </div>
+
+      <!-- Education 2 -->
+      <div class="qualification_data">
+        <div>
+          <h3 class="qualification_title">LD College of Engineering, Gujarat, India</h3>
+          <span class="qualification_subtitle">Master of Engineering in Electrical</span>
+          <div class="qualification_calender">
+            <i class="uil uil-calendar-alt"></i>
+            2017 - 2019
           </div>
+        </div>
+
+        <div>
+          <span class="qualification_rounder"></span>
+          <span class="qualification_line"></span>
+        </div>
+      </div>
+
+      <!-- Education 3 -->
+      <div class="qualification_data">
+        <div>
+          <h3 class="qualification_title">Vishwakarma Government Engineering, Gujarat, India</h3>
+          <span class="qualification_subtitle">Bachelor of Engineering in Electrical </span>
+          <div class="qualification_calender">
+            <i class="uil uil-calendar-alt"></i>
+            2014 - 2016
           </div>
-       
-          <div class="qualification_sections">
+        </div>
 
-           <!-- Work Section -->
-          <section class="work section">
-            <h2 class="section_title">Work Experience</h2>
-            <div class="work_container container">
-              <!-- Work Item 1 -->
-              <div class="work_item">
-                <h3 class="work_title">Infosys</h3>
-                <span class="work_subtitle">Associate Consultant</span>
-                <div class="work_date">
-                  <i class="uil uil-calendar-alt"></i> May 2022 - August 2023
-                </div>
-              </div>
+        <div>
+          <span class="qualification_rounder"></span>
+          <span class="qualification_line"></span>
+        </div>
+      </div>
+    </div>
 
-              <!-- Work Item 2 -->
-              <div class="work_item">
-                <h3 class="work_title">Tata Consultancy Service</h3>
-                <span class="work_subtitle">Salesforce Web Developer</span>
-                <div class="work_date">
-                  <i class="uil uil-calendar-alt"></i> February 2020 – April 2023
-                </div>
-              </div>
-            </div>
-          </section>
+    <!-- Work Section -->
+    <div class="qualification_content" data-content id="work">
+      <!-- Work 1 -->
+      <div class="qualification_data">
+        <div>
+          <h3 class="qualification_title">Infosys</h3>
+          <span class="qualification_subtitle">Associate Consultant</span>
+          <div class="qualification_calender">
+            <i class="uil uil-calendar-alt"></i>
+            May 2022 - August 2023
+          </div>
+        </div>
 
-          <!-- Education Section -->
-          <section class="education section">
-            <h2 class="section_title">Education</h2>
-            <div class="education_container container">
-              <!-- Education Item 1 -->
-              <div class="education_item">
-                <h3 class="education_title">Binghamton University, Thomas J. Watson College of Engineering and Applied Science</h3>
-                <span class="education_subtitle">Master of Science in Information Systems</span>
-                <div class="education_date">
-                  <i class="uil uil-calendar-alt"></i> 2023 - 2025
-                </div>
-              </div>
-          
-              <!-- Education Item 2 -->
-              <div class="education_item">
-                <h3 class="education_title">LD College of Engineering, Gujarat, India</h3>
-                <span class="education_subtitle">Master of Engineering in Electrical</span>
-                <div class="education_date">
-                  <i class="uil uil-calendar-alt"></i> 2017 - 2019
-                </div>
-              </div>
+        <div>
+          <span class="qualification_rounder"></span>
+          <span class="qualification_line"></span>
+        </div>
+      </div>
 
-              <!-- Education Item 3 -->
-              <div class="education_item">
-                <h3 class="education_title">Vishwakarma Government Engineering, Gujarat, India</h3>
-                <span class="education_subtitle">Bachelor of Engineering in Electrical</span>
-                <div class="education_date">
-                  <i class="uil uil-calendar-alt"></i> 2014 - 2016
-                </div>
-              </div>
-            </div>
-          </section>
+      <!-- Work 2 -->
+      <div class="qualification_data">
+        <div>
+          <h3 class="qualification_title">Tata Consultancy Service</h3>
+          <span class="qualification_subtitle">Salesforce Web Developer</span>
+          <div class="qualification_calender">
+            <i class="uil uil-calendar-alt"></i>
+            February 2020 – April 2023
+          </div>
+        </div>
+
+        <div>
+          <span class="qualification_rounder"></span>
+          <span class="qualification_line"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
        
