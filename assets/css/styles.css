@@ -598,7 +598,7 @@ img {
 
 
 
-/*==================== QUALIFICATION ====================
+/*==================== QUALIFICATION ====================*/
 .qualification_tabs{
   display: flex;
   justify-content: space-evenly;
@@ -668,66 +668,7 @@ img {
 
 .qualification_button.qualification_active{
   color: var(--first-color);
-}*/
-/* Work Section */
-.work_container {
-  display: flex;
-  flex-direction: column;
 }
-
-.work_item {
-  background-color: #f8f8f8;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-}
-
-.work_title {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.work_subtitle {
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-.work_date {
-  color: #888;
-}
-
-/* Education Section */
-.education_container {
-  display: flex;
-  flex-direction: column;
-}
-
-.education_item {
-  background-color: #f8f8f8;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-}
-
-.education_title {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.education_subtitle {
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-.education_date {
-  color: #888;
-}
-
-
-
-
 /*==================== SERVICES ====================*/
 
 
